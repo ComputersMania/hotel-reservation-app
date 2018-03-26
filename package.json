@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ComputersMania/hotel-reservation-app/issues"
   },
-  "homepage": "https://github.com/ComputersMania/hotel-reservation-app#readme"
+  "homepage": "https://github.com/ComputersMania/hotel-reservation-app#readme",
+  "dependencies": {
+    "massive": "^4.7.1"
+  }
 }
