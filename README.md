@@ -4,4 +4,5 @@
 Why not?
 
 ## Why KOA
-I like Koa wood because it's esotic
+I like Koa wood because it's esotic.
+Also, Koa.js is lighter than express
