@@ -8,8 +8,8 @@
     "feathers"
   ],
   "author": {
-    "name": "lesuitesaltorrione",
-    "email": "ilgiardinodimelange@gmail.com"
+    "name": "ComputersMania",
+    "email": "vincenzp3393@gmail.com"
   },
   "contributors": [],
   "bugs": {},
@@ -18,11 +18,11 @@
     "test": "test/"
   },
   "engines": {
-    "node": "^8.0.0",
-    "yarn": ">= 0.18.0"
+    "node": "^9.0.0",
+    "npm": ">= 3.0.0"
   },
   "scripts": {
-    "test": "yarn run eslint && yarn run mocha",
+    "test": "npm run eslint && npm run mocha",
     "eslint": "eslint src/. test/. --config .eslintrc.json",
     "start": "node src/",
     "mocha": "mocha test/ --recursive --exit"
@@ -30,7 +30,7 @@
   "dependencies": {
     "@feathersjs/configuration": "^1.0.2",
     "@feathersjs/errors": "^3.3.0",
-    "@feathersjs/express": "^1.2.1",
+    "@feathersjs/express": "^1.2.0",
     "@feathersjs/feathers": "^3.1.4",
     "@feathersjs/socketio": "^3.2.0",
     "compression": "^1.7.2",
@@ -38,13 +38,13 @@
     "feathers-sequelize": "^3.1.0",
     "helmet": "^3.12.0",
     "pg": "^7.4.1",
-    "sequelize": "^4.37.5",
-    "serve-favicon": "^2.5.0",
-    "winston": "^2.4.1"
+    "sequelize": "^4.37.4",
+    "serve-favicon": "^2.4.5",
+    "winston": "^2.4.0"
   },
   "devDependencies": {
-    "eslint": "^4.19.1",
-    "mocha": "^5.0.5",
+    "eslint": "^4.18.2",
+    "mocha": "^5.0.4",
     "request": "^2.85.0",
     "request-promise": "^4.2.2"
   }
