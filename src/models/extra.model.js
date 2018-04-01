@@ -5,17 +5,9 @@ const DataTypes = Sequelize.DataTypes;
 
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
-  const roomType = sequelizeClient.define('room_type', {
-    name: {
-      type: DataTypes.STRING(25),
-      allowNull: false
-    },
-    desc: {
-      type: DataTypes.TEXT,
-      allowNull: true
-    },
-    capacity: {
-      type: DataTypes.TINYINT,
+  const extra = sequelizeClient.define('extra', {
+    text: {
+      type: DataTypes.STRING,
       allowNull: false
     }
   }, {
@@ -27,10 +19,10 @@ module.exports = function (app) {
   });
 
   // eslint-disable-next-line no-unused-vars
-  roomType.associate = function (models) {
+  extra.associate = function (models) {
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
   };
 
-  return roomType;
+  return extra;
 };
