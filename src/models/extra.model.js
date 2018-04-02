@@ -6,9 +6,17 @@ const DataTypes = Sequelize.DataTypes;
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const extra = sequelizeClient.define('extra', {
-    text: {
-      type: DataTypes.STRING,
+    name: {
+      type: DataTypes.JSON,
       allowNull: false
+    },
+    desc: {
+      type: DataTypes.JSON,
+      allowNull: true
+    },
+    price: {
+      type: DataTypes.TINYINT,
+      allowNull: true
     }
   }, {
     hooks: {

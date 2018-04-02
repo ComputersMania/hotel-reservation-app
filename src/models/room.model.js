@@ -6,9 +6,13 @@ const DataTypes = Sequelize.DataTypes;
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const room = sequelizeClient.define('room', {
-    text: {
-      type: DataTypes.STRING,
+    name: {
+      type: DataTypes.JSON,
       allowNull: false
+    },
+    desc: {
+      type: DataTypes.JSON,
+      allowNull: true
     }
   }, {
     hooks: {

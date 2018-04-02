@@ -7,11 +7,11 @@ module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const roomType = sequelizeClient.define('room_type', {
     name: {
-      type: DataTypes.STRING(25),
+      type: DataTypes.JSON,
       allowNull: false
     },
     desc: {
-      type: DataTypes.TEXT,
+      type: DataTypes.JSON,
       allowNull: true
     },
     capacity: {
