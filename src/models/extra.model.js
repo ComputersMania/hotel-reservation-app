@@ -15,7 +15,7 @@ module.exports = function (app) {
       allowNull: true
     },
     price: {
-      type: DataTypes.TINYINT,
+      type: DataTypes.FLOAT,
       allowNull: true
     }
   }, {

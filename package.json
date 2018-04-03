@@ -32,6 +32,7 @@
     "@feathersjs/errors": "^3.3.0",
     "@feathersjs/express": "^1.2.0",
     "@feathersjs/feathers": "^3.1.4",
+    "@feathersjs/primus": "^3.2.0",
     "@feathersjs/socketio": "^3.2.0",
     "compression": "^1.7.2",
     "cors": "^2.8.4",
@@ -40,6 +41,7 @@
     "pg": "^7.4.1",
     "sequelize": "^4.37.4",
     "serve-favicon": "^2.4.5",
+    "uws": "^9.14.0",
     "winston": "^2.4.0"
   },
   "devDependencies": {

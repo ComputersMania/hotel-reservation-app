@@ -15,7 +15,7 @@ module.exports = function (app) {
       allowNull: true
     },
     capacity: {
-      type: DataTypes.TINYINT,
+      type: DataTypes.SMALLINT,
       allowNull: false
     }
   }, {
