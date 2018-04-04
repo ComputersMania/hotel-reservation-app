@@ -6,5 +6,64 @@
     "default": 10,
     "max": 50
   },
-  "postgres": "postgres://postgres:@localhost:5432/hotel_reservation_app"
+  "postgres": "postgres://postgres:@localhost:5432/hotel_reservation_app",
+  "authentication": {
+    "secret": "e778e27b832a0686ce56edb1a8bc6ce9d029055bbdaae0daab84fc301b998f8b3f3fa1ee458509d114ece968d7af266693cdc828fe630663418f0e1c4cf67179cc1f76bc88746beb3faad4724ebc42b7db4af53c00ba8af011ff758a4e91e1b47f8a90dfd9a9a99ee55ad6f3fc76d53be9320cb83cd6e90e68cf02be6a2d82f9540c44678653fd8ff90468ecf754fa1ba341762c7a61ef4fcb2c952f1a914495eea7e66ac19cedceafc9fcb6db81d75e7a7bbe6ac15662c925d37ebbdd0a2a69b8a92c20b5f04fcd4ec7159607bc7ca283d4fc6fcdde587233fadecb4a11c1cef796d59151eff5c88f5b57a2cee45e31a955303be65083cd77cad929b520a564",
+    "strategies": [
+      "jwt",
+      "local"
+    ],
+    "path": "/authentication",
+    "service": "users",
+    "jwt": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "subject": "anonymous",
+      "issuer": "feathers",
+      "algorithm": "HS256",
+      "expiresIn": "1d"
+    },
+    "local": {
+      "entity": "user",
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "google": {
+      "clientID": "your google client id",
+      "clientSecret": "your google client secret",
+      "successRedirect": "/",
+      "scope": [
+        "profile openid email"
+      ]
+    },
+    "facebook": {
+      "clientID": "your facebook client id",
+      "clientSecret": "your facebook client secret",
+      "successRedirect": "/",
+      "scope": [
+        "public_profile",
+        "email"
+      ],
+      "profileFields": [
+        "id",
+        "displayName",
+        "first_name",
+        "last_name",
+        "email",
+        "gender",
+        "profileUrl",
+        "birthday",
+        "picture",
+        "permissions"
+      ]
+    },
+    "cookie": {
+      "enabled": true,
+      "name": "feathers-jwt",
+      "httpOnly": false,
+      "secure": false
+    }
+  }
 }

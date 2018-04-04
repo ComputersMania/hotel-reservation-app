@@ -1,8 +1,10 @@
 
 
+const includeModel = require('../../hooks/include-model');
+
 module.exports = {
   before: {
-    all: [],
+    all: [includeModel('room-type')],
     find: [],
     get: [],
     create: [],
