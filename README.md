@@ -1,3 +1,5 @@
+<p align="center"><img src="Logo/Logotype.png" alt="Hotel Reservation" height="100px"></p>
+
 # hotel-reservation-app
 
 > 
