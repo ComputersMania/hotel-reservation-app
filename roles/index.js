@@ -1,9 +1,11 @@
 const {template} = require('lodash')
 const {readFileSync} = require('fs')
+const path = require('path')
 const {Ability} = require('@casl/ability')
 
 let compileJSONrole = (filename) => {
-  const rawText = readFileSync(filename)
+  const filePath = path.join(__dirname, filename)
+  const rawText = readFileSync(filePath, 'utf8')
   const compiledTemplate = template(rawText)
   return options => {
     const jsonRole = compiledTemplate(options)
@@ -13,7 +15,7 @@ let compileJSONrole = (filename) => {
 }
 
 module.exports = {
-  admin: compileJSONrole('./admin.json'),
-  customer: compileJSONrole('./customer.json'),
-  anonymous: compileJSONrole('./anonymous.json')
+  admin: compileJSONrole('admin.json'),
+  customer: compileJSONrole('customer.json'),
+  anonymous: compileJSONrole('anonymous.json')
 }
