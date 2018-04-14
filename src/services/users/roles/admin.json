@@ -1,0 +1,9 @@
+[
+  {
+    "actions": ["create", "read", "update", "delete"],
+    "subject": "all",
+    "conditions": {
+      
+    }
+  }
+]

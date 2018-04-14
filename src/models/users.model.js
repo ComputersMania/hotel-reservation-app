@@ -3,6 +3,8 @@
 const Sequelize = require('sequelize');
 const DataTypes = Sequelize.DataTypes;
 
+const roles = require('../services/users/roles')
+
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
   const users = sequelizeClient.define('users', {
@@ -17,13 +19,34 @@ module.exports = function (app) {
       allowNull: false
     },
 
-    
+
 
     googleId: { type: Sequelize.STRING },
 
     facebookId: { type: Sequelize.STRING },
 
+    // Role management
+
+    role: {
+      type: DataTypes.STRING(15),
+      allowNull: false
+    }
+
   }, {
+    getterMethods: {
+      ability() {
+        if (roles[ this.role ]) {
+          return roles[this.role]({
+            user: this
+          })
+        } else {
+          return roles.anonymous({
+            user: this
+          })
+        }
+      }
+    },
+
     hooks: {
       beforeCount(options) {
         options.raw = true;

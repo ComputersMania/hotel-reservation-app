@@ -16,6 +16,7 @@ let compileJSONrole = (filename) => {
 
 module.exports = {
   admin: compileJSONrole('admin.json'),
+  employee: compileJSONrole('employee.json'),
   customer: compileJSONrole('customer.json'),
   anonymous: compileJSONrole('anonymous.json')
 }
