@@ -14,9 +14,17 @@ let compileJSONrole = (filename) => {
   }
 }
 
-module.exports = {
+const roles = {
   admin: compileJSONrole('admin.json'),
   employee: compileJSONrole('employee.json'),
   customer: compileJSONrole('customer.json'),
   anonymous: compileJSONrole('anonymous.json')
+}
+
+module.exports = user => {
+  if (roles[ user.role ]) {
+    return roles[this.role]( {user: user} )
+  } else {
+    return roles.anonymous( {user: user} )
+  }
 }
