@@ -3,12 +3,15 @@
 
 // eslint-disable-next-line no-unused-vars
 module.exports = function () {
-  return async context => {
-    includes = arguments.map((serviceName) => {
+  const args = Array.from(arguments)
+  let includes = (hook) => {
+    return args.map( serviceName => {
       return { model: hook.app.services[serviceName].Model }
     })
-    hook.params.sequelize = {
-      include: includes
+  }
+  return async context => {
+    context.params.sequelize = {
+      include: includes(context)
     }
     return context;
   };
