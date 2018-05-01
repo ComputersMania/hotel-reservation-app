@@ -5,7 +5,7 @@ const DataTypes = Sequelize.DataTypes;
 
 module.exports = function (app) {
   const sequelizeClient = app.get('sequelizeClient');
-  const room = sequelizeClient.define('room', {
+  const rooms = sequelizeClient.define('rooms', {
     name: {
       type: DataTypes.JSON,
       allowNull: false
@@ -23,10 +23,10 @@ module.exports = function (app) {
   });
 
   // eslint-disable-next-line no-unused-vars
-  room.associate = function (models) {
+  rooms.associate = function (models) {
     // Define associations here
-    room.hasOne( models.room_type )
+    rooms.hasOne( models.room_type )
   };
 
-  return room;
+  return rooms;
 };
