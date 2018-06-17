@@ -1,0 +1,19 @@
+{
+  "name": "hotel-reservation-app-summa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ComputersMania/hotel-reservation-app.git"
+  },
+  "author": "Vincenzo Pellegrini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ComputersMania/hotel-reservation-app/issues"
+  },
+  "homepage": "https://github.com/ComputersMania/hotel-reservation-app#readme"
+}
