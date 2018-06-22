@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ComputersMania/hotel-reservation-app#readme",
   "dependencies": {
-    "fastify": "^1.6.0"
+    "fastify": "^1.6.0",
+    "massive": "^5.0.0"
   }
 }
