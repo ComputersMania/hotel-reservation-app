@@ -1,7 +1,7 @@
 {
   "name": "hotel-reservation-app-summa",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "An managment and booking infrastracture based on fastify with graphql support",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,9 +11,12 @@
     "url": "git+https://github.com/ComputersMania/hotel-reservation-app.git"
   },
   "author": "Vincenzo Pellegrini",
-  "license": "ISC",
+  "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/ComputersMania/hotel-reservation-app/issues"
   },
-  "homepage": "https://github.com/ComputersMania/hotel-reservation-app#readme"
+  "homepage": "https://github.com/ComputersMania/hotel-reservation-app#readme",
+  "dependencies": {
+    "fastify": "^1.6.0"
+  }
 }
